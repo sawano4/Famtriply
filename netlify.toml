@@ -27,7 +27,7 @@
   from = "/auth/*"
   to = "/auth/[...slug].html"
   status = 200
-  status = 200
+ 
 
 # Handle Next.js rewrites
 [[redirects]]
