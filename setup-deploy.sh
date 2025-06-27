@@ -8,7 +8,7 @@ chmod +x fix-dependencies.js
 
 # Install node modules with correct flags
 echo "📦 Installing dependencies..."
-npm install --legacy-peer-deps
+npm ci --legacy-peer-deps || npm install --legacy-peer-deps --force
 
 # Add missing shadcn components if any
 echo "🧩 Installing shadcn/ui components..."
@@ -27,6 +27,10 @@ npx shadcn-ui@latest add input --yes
 npx shadcn-ui@latest add textarea --yes
 npx shadcn-ui@latest add progress --yes
 npx shadcn-ui@latest add badge --yes
+
+# Install deployment tools
+echo "🔧 Installing deployment tools..."
+npm install -g vercel netlify-cli
 
 # Build the project
 echo "🏗️ Building the project..."

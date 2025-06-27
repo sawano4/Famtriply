@@ -3,7 +3,11 @@ REM Setup script to prepare the project for deployment on Windows
 
 REM Install node modules with correct flags
 echo Installing dependencies...
-call npm install --legacy-peer-deps
+call npm ci --legacy-peer-deps
+IF %ERRORLEVEL% NEQ 0 (
+  echo npm ci failed, trying npm install...
+  call npm install --legacy-peer-deps --force
+)
 
 REM Add missing shadcn components if any
 echo Installing shadcn/ui components...
@@ -22,6 +26,10 @@ call npx shadcn-ui@latest add input --yes
 call npx shadcn-ui@latest add textarea --yes
 call npx shadcn-ui@latest add progress --yes
 call npx shadcn-ui@latest add badge --yes
+
+REM Install deployment tools
+echo Installing deployment tools...
+call npm install -g vercel netlify-cli
 
 REM Build the project
 echo Building the project...

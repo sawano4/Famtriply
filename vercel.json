@@ -1,7 +1,7 @@
 {
   "version": 2,
   "buildCommand": "npm run build",
-  "installCommand": "npm install --legacy-peer-deps",
+  "installCommand": "npm install --legacy-peer-deps --force",
   "framework": "nextjs",
   "outputDirectory": ".next",
   "env": {
@@ -10,5 +10,10 @@
     "NEXT_PUBLIC_GOOGLE_MAPS_API_KEY": "your-google-maps-api-key",
     "SITE_URL": "https://famtriply.vercel.app"
   },
-  "regions": ["iad1"]
+  "regions": ["iad1"],
+  "build": {
+    "env": {
+      "NEXT_TELEMETRY_DISABLED": "1"
+    }
+  }
 }
