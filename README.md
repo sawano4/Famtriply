@@ -2,7 +2,7 @@
 
 FamTriply is a comprehensive family trip planning application built with Next.js and Supabase. It helps families plan their trips together, with features for itinerary management, expense tracking, photo sharing, and more.
 
-## 🚀 Quick Deployment Guide (Updated)
+## 🚀 Quick Deployment Guide
 
 ### Option 1: One-Click Vercel Deployment
 
@@ -24,10 +24,23 @@ FamTriply is a comprehensive family trip planning application built with Next.js
    cd famtriply
    ```
 
-2. **Run the setup script**
+2. **Install dependencies and build**
    ```bash
-   # For Windows
-   setup-deploy.bat
+   # Install dependencies
+   npm install --legacy-peer-deps --force
+   
+   # Build the project
+   npm run build
+   ```
+
+3. **Deploy to Vercel or Netlify**
+   ```bash
+   # For Vercel
+   npm run deploy:vercel
+   
+   # For Netlify
+   npm run deploy:netlify
+   ```
    
    # For Mac/Linux
    bash setup-deploy.sh

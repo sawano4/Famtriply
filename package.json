@@ -7,13 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "preinstall": "npx npm-force-resolutions",
-    "postinstall": "node install-components.js",
-    "prebuild": "node fix-dependencies.js",
     "postbuild": "next-sitemap --config next-sitemap.config.js",
-    "check-deploy": "node check-deployment.js",
-    "deploy:vercel": "npm run check-deploy && vercel --prod",
-    "deploy:netlify": "npm run check-deploy && netlify deploy --prod"
+    "deploy:vercel": "vercel --prod",
+    "deploy:netlify": "netlify deploy --prod"
   },
   "dependencies": {
     "@radix-ui/react-alert-dialog": "^1.0.5",

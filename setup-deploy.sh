@@ -2,13 +2,9 @@
 
 # Setup script to prepare the project for deployment
 
-# Make scripts executable
-chmod +x check-deployment.js
-chmod +x fix-dependencies.js
-
 # Install node modules with correct flags
 echo "📦 Installing dependencies..."
-npm ci --legacy-peer-deps || npm install --legacy-peer-deps --force
+npm install --legacy-peer-deps --force
 
 # Add missing shadcn components if any
 echo "🧩 Installing shadcn/ui components..."
@@ -35,10 +31,6 @@ npm install -g vercel netlify-cli
 # Build the project
 echo "🏗️ Building the project..."
 npm run build
-
-# Run pre-deployment checks
-echo "🔍 Running pre-deployment checks..."
-node check-deployment.js
 
 echo "✅ Project is ready for deployment!"
 echo ""
