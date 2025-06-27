@@ -22,9 +22,9 @@ const nextConfig = {
     NEXT_PUBLIC_SUPABASE_ANON_KEY: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '',
     SITE_URL: process.env.SITE_URL || 'https://famtriply.vercel.app',
   },
-  // Add output: 'standalone' for better serverless deployment
+  // Allowing server-side rendering for proper CSS processing
   output: 'standalone',
-  // Increase memory limit for builds
+  // Configuring image optimization for deployment
   experimental: {
     serverComponentsExternalPackages: ['sharp']
   }

@@ -17,7 +17,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="stylesheet" href="/_next/static/css/app/globals.css" />
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   )
