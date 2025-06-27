@@ -1,33 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# FamTriply - Family Trip Planning App
 
-## Getting Started
+FamTriply is a comprehensive family trip planning application built with Next.js and Supabase. It helps families plan their trips together, with features for itinerary management, expense tracking, photo sharing, and more.
 
-First, run the development server:
+## Quick Deployment Guide
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Option 1: Deploy to Vercel (Recommended)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. **Fork or clone this repository**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2. **Run the setup script**
+   ```bash
+   # For Windows
+   setup-deploy.bat
+   
+   # For Mac/Linux
+   bash setup-deploy.sh
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. **Deploy to Vercel**
+   ```bash
+   npx vercel
+   ```
+   
+   Or, if you have Vercel CLI installed:
+   ```bash
+   vercel
+   ```
+   
+   For production deployment:
+   ```bash
+   npm run deploy:vercel
+   ```
 
-## Learn More
+4. **Add environment variables in Vercel dashboard**
+   - `NEXT_PUBLIC_SUPABASE_URL`
+   - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+   - `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY`
+   - `SITE_URL` (your site URL, e.g., https://famtriply.vercel.app)
 
-To learn more about Next.js, take a look at the following resources:
+1. **Fork or clone this repository**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Run the setup script**
+   ```bash
+   # For Windows
+   setup-deploy.bat
+   
+   # For Mac/Linux
+   bash setup-deploy.sh
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. **Deploy to Netlify**
+   ```bash
+   npm run deploy:netlify
+   ```
+
+4. **Add environment variables in Netlify dashboard**
+   - `NEXT_PUBLIC_SUPABASE_URL`
+   - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+   - `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY`
 
 ## Deploy on Vercel
 
