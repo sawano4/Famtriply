@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://famtriply.vercel.app
+
+# Sitemaps
+Sitemap: https://famtriply.vercel.app/sitemap.xml
