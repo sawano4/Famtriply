@@ -24,11 +24,6 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
-[[headers]]
-  for = "/*.css"
-  [headers.values]
-    Content-Type = "text/css"
-
 # Redirects to support App Router dynamic routing & server components
 [[redirects]]
   from = "/_next/*"
