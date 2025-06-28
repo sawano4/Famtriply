@@ -18,9 +18,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <link rel="stylesheet" href="/_next/static/css/app/globals.css" />
-      </head>
       <body className={inter.className}>{children}</body>
     </html>
   )
